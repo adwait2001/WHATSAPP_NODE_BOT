@@ -116,4 +116,5 @@ class sub1():
 
         
 obj=sub1()
-obj.add_and_show(sys.argv[1])
+reply=obj.add_and_show(sys.argv[1])
+print(reply)
