@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const app = express();
 const port = process.env.PORT || 1500;
 const {spawn} = require("child_process");
-
+const{PythonShell}=require("python-shell")
 
 app.use(bodyParser.json())
 app.get('/',(req,res)=>{
@@ -28,12 +28,28 @@ app.post('/my_webhook_url', (req, res)=> {
       if(!message =="" && message){
         //Get user message and reply same message back to user - echo bot
         // Using Send message API
-        const pyProg = spawn('python',["./script.py",message]);
-        pyProg.stdout.on('data', function(data) {
-          sendMessage(senderPhoneNumber,data.toString(), () =>{
-            res.status(200).send();
-          });
-      });
+      //   const pyProg = spawn('python',["./nlp_main/adwaitprblm.py",message]);
+      //   pyProg.stdout.on('data', function(data) {
+      //     console.log('inside')
+      //     sendMessage(senderPhoneNumber,data.toString(), () =>{
+      //       res.status(200).send();
+      //     });
+      // });
+
+      let options = { 
+        mode: 'text', 
+        pythonOptions: ['-u'], // get print results in real-time 
+        args: [message,senderPhoneNumber] //An argument which can be accessed in the script using sys.argv[1] 
+    }; 
+      
+  
+    PythonShell.run('./nlp_main/sender.py', options, function (err, result){ 
+          if (err) throw err; 
+          // result is an array consisting of messages collected  
+          //during execution of script. 
+          // console.log('result: ', result.toString()); 
+          res.send() 
+    }); 
        
       }
     }  
@@ -51,13 +67,13 @@ function sendMessage(recepientNumber, message, callback){
       'url': 'https://api.gupshup.io/sm/api/v1/msg',
       'headers': {
           'Content-Type': 'application/x-www-form-urlencoded',
-          'apikey': 'gzpd165iklfznhawmewyjgexzkgkgqng'
+          'apikey': '8w3nskoooe0rznmewrjlcec2eltfvfpx'
       },
       form: {
           'channel': 'whatsapp',
           'source': '917834811114', //This is the Sandbox number
           'destination': recepientNumber,
-          'src.name': 'ERWINSMITH',
+          'src.name': 'adwait2020',
           'message.payload': message
       }
   };

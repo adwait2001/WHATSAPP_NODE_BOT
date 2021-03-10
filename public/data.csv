@@ -1,0 +1,17 @@
+srno,category,product,desciption ,image,subweight,weight,price ,discount,stock,flexiblity
+1,dairy,ghee,"shuddh cows ghee,100% pure",http//j.com,grams,kilo,400,not available,10,"can sell half ,3/4 kilo too"
+2,dairy,khava,taja khava,http//ddg.com,grams,kilo,300,not available,10,"can sell half ,3/4 kilo too"
+3,dairy,paneer,spongy fresh punjabi paneer,http//sjn.com,grams,kilo,200,not available,10,"can sell half ,3/4 kilo too"
+4,dairy,dahi(ghatt),taje ghatt malaidaaar dahi ,http//dbsb.com,militres,litre,100,10%,10,only packets of 250ml
+5,soap,vim,swatch kapdyansathi ,http//dsd.com,0,0,10,not available,50,no fractionly sold
+6,soap,wheel,swatch kapdyansathi ,http//sdd.com,0,0,10,not available,50,no fractionly sold
+7,soap,tiptop,swatch kapdyansathi ,http//vsdfsd.com,0,0,8,not available,50,no fractionly sold
+8,soap,hamam,natural and soft ,http//ewe.com,0,0,20,not available,30,no fractionly sold
+9,biscuits,20-20,crunchy and tasty,http//ewe.com,0,0,20,not available,30,no fractionly sold
+10,biscuits,parle,crunchy and tasty,http//ewe.com,0,0,25,not available,30,no fractionly sold
+11,biscuits,britania,crunchy and tasty,http//ewe.com,0,0,20,not available,30,no fractionly sold
+12,biscuits,priyagold,crunchy and tasty,http//ewe.com,0,0,30,not available,30,no fractionly sold
+13,detergent,nirma,easy to use,http//ewe.com,grams,kilo,15,not available,30,no fractionly sold
+14,detergent,tata,easy to use,http//ewe.com,grams,kilo,20,not available,30,no fractionly sold
+15,detergent,wheel,easy to use,http//ewe.com,grams,kilo,25,not available,30,no fractionly sold
+16,detergent,rin,easy to use,http//ewe.com,grams,kilo,20,not available,30,no fractionly sold
