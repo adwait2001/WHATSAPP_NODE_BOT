@@ -14,9 +14,10 @@ cart          = {"+917666779269":""}
 
 import json
 
+# 'C:\\Users\\ADWAIT\\Downloads\\mydata.json'
 class jsonfile():
 
-  def __init__(self,cust,file = 'C:\\Users\\ADWAIT\\Downloads\\mydata.json'):
+  def __init__(self,cust,file =filename):
     self.cust = cust
     self.file = file 
 
