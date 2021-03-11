@@ -7,7 +7,7 @@ const{PythonShell}=require("python-shell")
 
 app.use(bodyParser.json())
 app.get('/',(req,res)=>{
-  res.send('HEY');
+  res.send('HEY')
 })
 app.post('/my_webhook_url', (req, res)=> {
     var inboundPayload = req.body;
